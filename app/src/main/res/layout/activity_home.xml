@@ -6,9 +6,14 @@
     android:layout_height="match_parent"
     tools:context="cs465.tripplanner.HomeActivity">
 
-    <include layout="@layout/toolbar_home" />
+    <include
+        layout="@layout/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <include layout="@layout/content_home" />
+    <include
+        layout="@layout/content_home"
+        app:layout_anchorGravity="top" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
