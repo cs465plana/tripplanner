@@ -13,6 +13,10 @@ class TripItem {
         this.tags = tags;
     }
 
+    public String getUsernameString() {
+        return username;
+    }
+
     public String getLocationString() {
         return location;
     }
