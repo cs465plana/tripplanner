@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Add Location"
+            android:text="@string/title_activity_add_location"
             android:textColor="@color/colorTextPrimary" />
 
         <ImageButton
