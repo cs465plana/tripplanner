@@ -23,7 +23,7 @@ public class AddDatesActivity extends AppCompatActivity implements View.OnClickL
 
     public void onClick(View v) {
         if (v.getId() == R.id.next_button3) {
-            Intent i = new Intent(this, FinalActivity.class);
+            Intent i = new Intent(this, AddTagsActivity.class);
             startActivity(i);
         } else if (v.getId() == R.id.back_button2) {
             Intent i = new Intent(this, AddBudgetActivity.class);
