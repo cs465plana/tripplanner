@@ -13,9 +13,9 @@ import java.util.ArrayList;
  */
 
 public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.TripListItemHolder> {
-    public ArrayList<String> vals;
+    public ArrayList<TripItem> vals;
 
-    public TripListAdapter(ArrayList<String> vals) {
+    public TripListAdapter(ArrayList<TripItem> vals) {
         this.vals = vals;
     }
 
@@ -27,7 +27,10 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.TripLi
 
     @Override
     public void onBindViewHolder(TripListItemHolder holder, int position) {
-        holder.locTextView.setText(vals.get(position));
+        TripItem item = vals.get(position);
+        holder.locTextView.setText(item.location);
+        holder.budgetTextView.setText(item.getBudgetString());
+        holder.tagsTextView.setText(item.getTagsString());
     }
 
     @Override
@@ -38,10 +41,14 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.TripLi
 
     public static class TripListItemHolder extends RecyclerView.ViewHolder {
         private TextView locTextView;
+        private TextView budgetTextView;
+        private TextView tagsTextView;
 
         public TripListItemHolder(View itemView) {
             super(itemView);
             locTextView = itemView.findViewById(R.id.trip_loc_text);
+            budgetTextView = itemView.findViewById(R.id.trip_budget_text);
+            tagsTextView = itemView.findViewById(R.id.trip_tags_text);
         }
     }
 }
