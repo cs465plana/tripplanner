@@ -5,16 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class AddTagsActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button finishButton;
+    private ImageButton finishButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_tags);
 
-        finishButton = (Button) findViewById(R.id.finish_button);
+        finishButton = findViewById(R.id.finish_button);
         finishButton.setOnClickListener(this);
         setTitle("Add Location");
     }
