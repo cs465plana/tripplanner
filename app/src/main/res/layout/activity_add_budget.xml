@@ -1,56 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cs465.tripplanner.AddBudgetActivity"
-    android:padding="20px">
+    tools:context="cs465.tripplanner.AddBudgetActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Enter your daily budget for the trip"
-        android:textSize="72px"/>
-
-    <EditText
-        android:id="@+id/editText"
+    <include
+        layout="@layout/toolbar_add_budget"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:inputType="number"
-        android:text="$ 85 per day"
-        android:textSize="72px" />
+        android:layout_height="wrap_content" />
 
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/next_button2"
-        android:progress="25"/>
+    <include layout="@layout/content_add_budget" />
 
-    <ImageButton
-        android:id="@+id/next_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/back_button" />
-
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/next_button2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/dates_button"/>
-
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

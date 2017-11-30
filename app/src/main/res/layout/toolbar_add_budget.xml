@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_add_budget"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/PopupOverlay"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="5dp"
+        android:contentInsetEnd="5dp"
+        app:contentInsetLeft="5dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="5dp"
+        app:contentInsetEnd="5dp" >
+
+        <ImageButton
+            android:id="@+id/budget_back_button"
+            style="@style/ToolbarAddNavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="0dp"
+            app:srcCompat="@drawable/maps_button" />
+
+        <TextView
+            style="@style/ToolbarAddTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Budget"
+            android:textColor="@color/colorTextPrimary" />
+
+        <ImageButton
+            android:id="@+id/budget_next_button"
+            style="@style/ToolbarAddNavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/dates_button" />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
