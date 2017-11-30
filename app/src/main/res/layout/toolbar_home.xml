@@ -12,5 +12,6 @@
         android:background="@color/colorPrimaryDark"
         app:navigationIcon="@drawable/ic_menu_24dp"
         app:popupTheme="@style/PopupOverlay"
-        app:title="PlanA" />
+        app:title="PlanA"
+        app:titleTextColor="@color/colorTextPrimary" />
 </android.support.design.widget.AppBarLayout>

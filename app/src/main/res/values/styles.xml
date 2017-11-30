@@ -10,8 +10,20 @@
 
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
 
-    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
 
+    <style name="ToolbarAddTextStyle">
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarAddNavButton">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
 
 </resources>
