@@ -1,7 +1,5 @@
 package cs465.tripplanner;
 
-import java.util.ArrayList;
-
 class TripItem {
     private String username;
     private String location;

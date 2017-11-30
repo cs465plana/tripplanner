@@ -6,7 +6,7 @@
     android:theme="@style/AppBarOverlay">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_add_budget"
+        android:id="@+id/toolbar_add_location"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
@@ -21,23 +21,23 @@
         app:popupTheme="@style/PopupOverlay">
 
         <ImageButton
-            android:id="@+id/budget_back_button"
+            android:id="@+id/location_back_button"
             style="@style/ToolbarAddNavButton"
             android:layout_gravity="start"
-            app:srcCompat="@drawable/maps_button" />
+            app:srcCompat="@drawable/back_button" />
 
         <TextView
             style="@style/ToolbarAddTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Add Budget"
+            android:text="Add Location"
             android:textColor="@color/colorTextPrimary" />
 
         <ImageButton
-            android:id="@+id/budget_next_button"
+            android:id="@+id/location_next_button"
             style="@style/ToolbarAddNavButton"
             android:layout_gravity="end"
-            app:srcCompat="@drawable/dates_button1" />
+            app:srcCompat="@drawable/price_button2" />
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>

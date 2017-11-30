@@ -1,37 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cs465.tripplanner.AddLocationActivity">
 
-    <ImageView
+    <include
+        layout="@layout/toolbar_add_location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/map"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/location_text"
-        />
+        android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/location_text"
-        android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:textSize="50px"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/next_button"
-        android:inputType="text"
-        android:hint="Search Location"
-        android:paddingLeft="20px"/>
+    <include layout="@layout/content_add_location" />
 
-    <ImageButton
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/location_text"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/price_button2"
-        android:paddingRight="20px"/>
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

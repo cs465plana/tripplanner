@@ -3,7 +3,6 @@ package cs465.tripplanner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,16 +25,14 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show();
-            Intent i = new Intent(HomeActivity.this, AddBudgetActivity.class);
-            startActivity(i);
+                Intent i = new Intent(HomeActivity.this, AddLocationActivity.class);
+                startActivity(i);
             }
         });
 
         ArrayList<TripItem> trip_locs = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            trip_locs.add(new TripItem("User " + i, "Location " + i, 100*i, new String[] { "tag1", "tag2" }));
+            trip_locs.add(new TripItem("User " + i, "Location " + i, 100 * i, new String[]{"tag1", "tag2"}));
         }
 //        trip_locs.add("Paris, France");
 //        trip_locs.add("Brooklyn, NY");

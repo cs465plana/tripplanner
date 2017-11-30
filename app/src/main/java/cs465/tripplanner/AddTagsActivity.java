@@ -1,29 +1,18 @@
 package cs465.tripplanner;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
-public class AddTagsActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageButton finishButton;
+public class AddTagsActivity extends AddActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        layoutId = R.layout.activity_add_tags;
+        toolbarId = R.id.toolbar_add_tags;
+        backId = R.id.tags_back_button;
+        nextId = -1;
+        backClass = AddDatesActivity.class;
+        nextClass = null; // TODO
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_tags);
-
-        finishButton = findViewById(R.id.finish_button);
-        finishButton.setOnClickListener(this);
-        setTitle("Add Location");
     }
 
-    public void onClick(View v) {
-        if (v.getId() == R.id.finish_button) {
-            Intent i = new Intent(this, HomeActivity.class);
-            startActivity(i);
-        }
-    }
 }
