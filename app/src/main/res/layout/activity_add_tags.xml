@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cs465.tripplanner.AddTagsActivity">
-
-    <ImageView
-        android:id="@+id/finish_button"
+    tools:context="cs465.tripplanner.AddTagsActivity"
+    android:padding="50px">
+    
+    <TextView
+        android:id="@+id/your_tag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/finish_button"/>
+        android:layout_height="wrap_content"
+        android:textSize="72px"
+        android:text="Your tags: "
+        android:paddingTop="100px"
+        android:paddingBottom="100px"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/your_tag"
+        android:textSize="52px"
+        android:text="#nature   #food    #museums    #music"
+        android:paddingBottom="100px"
+        />
+
+
+    <EditText
+        android:id="@+id/search_tags"
+        android:layout_below="@+id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for tags"
+        android:textSize="45px"
+        />
+
+    <ImageButton
+        android:id="@+id/finish_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_tags"
+        android:scaleType="fitCenter"
+        android:src="@drawable/finish_button" />
+
+</RelativeLayout>
