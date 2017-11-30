@@ -6,4 +6,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="cs465.tripplanner.AddLocationActivity" />
+    tools:context="cs465.tripplanner.AddLocationActivity"
+    tools:showIn="@layout/activity_add_location" />
