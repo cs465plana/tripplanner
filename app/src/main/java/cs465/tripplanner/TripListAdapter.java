@@ -8,12 +8,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by szhu19 on 11/29/2017.
- */
-
 public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.TripListItemHolder> {
-    public ArrayList<TripItem> vals;
+    private ArrayList<TripItem> vals;
 
     public TripListAdapter(ArrayList<TripItem> vals) {
         this.vals = vals;
@@ -28,7 +24,7 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.TripLi
     @Override
     public void onBindViewHolder(TripListItemHolder holder, int position) {
         TripItem item = vals.get(position);
-        holder.locTextView.setText(item.location);
+        holder.locTextView.setText(item.getLocationString());
         holder.budgetTextView.setText(item.getBudgetString());
         holder.tagsTextView.setText(item.getTagsString());
     }

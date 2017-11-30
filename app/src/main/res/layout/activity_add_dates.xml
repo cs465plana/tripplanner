@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cs465.tripplanner.AddBudgetActivity"
+    android:paddingRight="25px"
+    android:paddingLeft="25px"
+    android:paddingTop="150px">
+
+    <EditText
+        android:id="@+id/departdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:inputType="date"
+        android:hint="Date of departure"
+        android:textSize="72px"/>
+
+
+    <Space
+        android:id="@+id/budg_space"
+        android:layout_width="wrap_content"
+        android:layout_height="300px"
+        android:layout_below="@+id/departdate"
+        android:layout_centerHorizontal="true"
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/budg_space"
+        android:gravity="center"
+        android:inputType="date"
+        android:hint="Date of return"
+        android:textSize="72px"/>
+
+    <ImageButton
+        android:id="@+id/next_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/back_button" />
+
+    <ImageButton
+        android:id="@+id/back_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/next_button3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/tag_button2" />
+
+</RelativeLayout>
