@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_trip_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="@dimen/toolbar_padding"
+        android:contentInsetEnd="@dimen/toolbar_padding"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="@dimen/toolbar_padding"
+        app:contentInsetEnd="@dimen/toolbar_padding"
+        app:popupTheme="@style/PopupOverlay">
+
+        <ImageButton
+            android:id="@+id/tags_back_button"
+            style="@style/ToolbarAddNavButton"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/menu" />
+
+        <TextView
+            style="@style/ToolbarAddTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="trip details"
+            android:textColor="@color/colorTextPrimary" />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
