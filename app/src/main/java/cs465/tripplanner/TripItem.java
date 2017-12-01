@@ -51,7 +51,11 @@ class TripItem {
     }
 
     public void setBudget(String budget) {
-        this.budget = Integer.parseInt(budget);
+        if (!budget.isEmpty()) {
+            this.budget = Integer.parseInt(budget);
+        } else {
+            this.budget = 0;
+        }
     }
 
     public void addTag(String tag) {
