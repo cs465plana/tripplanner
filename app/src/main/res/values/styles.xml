@@ -30,7 +30,7 @@
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
-    <style name="ToolbarAddNavButton">
+    <style name="ToolbarNavButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:adjustViewBounds">true</item>

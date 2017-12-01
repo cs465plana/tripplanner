@@ -22,7 +22,7 @@
 
         <ImageButton
             android:id="@+id/location_back_button"
-            style="@style/ToolbarAddNavButton"
+            style="@style/ToolbarNavButton"
             android:layout_gravity="start"
             app:srcCompat="@drawable/back_button" />
 
@@ -36,7 +36,7 @@
 
         <ImageButton
             android:id="@+id/location_next_button"
-            style="@style/ToolbarAddNavButton"
+            style="@style/ToolbarNavButton"
             android:layout_gravity="end"
             app:srcCompat="@drawable/price_button2" />
     </android.support.v7.widget.Toolbar>

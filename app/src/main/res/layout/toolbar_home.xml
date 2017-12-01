@@ -7,6 +7,8 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_home"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
@@ -21,8 +23,8 @@
         app:popupTheme="@style/PopupOverlay">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            style="@style/ToolbarAddNavButton"
+            android:id="@+id/your_trips_button"
+            style="@style/ToolbarNavButton"
             app:srcCompat="@drawable/menu" />
 
         <EditText
@@ -37,6 +39,8 @@
             android:inputType="text"
             android:padding="6dp"
             android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorTextHint" />
+            android:textColorHint="@color/colorTextHint"
+            android:nextFocusUp="@+id/toolbar_home"
+            android:nextFocusLeft="@+id/toolbar_home" />
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>
