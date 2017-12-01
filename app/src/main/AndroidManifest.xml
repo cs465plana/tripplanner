@@ -53,6 +53,8 @@
             android:name=".YourTripsActivity"
             android:label="@string/title_activity_your_trips"
             android:theme="@style/AppTheme"></activity>
+        <activity android:name=".SuggestionDetailsActivity" />
+        <activity android:name=".AddSuggestionActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,36 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cs465.tripplanner.SuggestionDetailsActivity"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            layout="@layout/toolbar_suggestion_details"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_suggestion_details" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addactivitybutton"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
