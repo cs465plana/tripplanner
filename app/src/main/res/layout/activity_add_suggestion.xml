@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cs465.tripplanner.SuggestionDetailsActivity"
+    tools:context="cs465.tripplanner.AddSuggestionActivity"
     android:fitsSystemWindows="true">
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -10,12 +10,12 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <include
-            layout="@layout/toolbar_suggestion_details"
+            layout="@layout/toolbar_add_suggestion"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_suggestion_details" />
+    <include layout="@layout/content_add_suggestion" />
 
     <RelativeLayout
         android:layout_width="match_parent"
