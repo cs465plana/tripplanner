@@ -10,8 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 
-import java.util.ArrayList;
-
 public class HomeActivity extends AppCompatActivity {
 
     @Override
@@ -41,17 +39,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ArrayList<TripItem> trip_locs = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            trip_locs.add(new TripItem("User " + i, "Location " + i, 100 * i, new String[]{"tag1", "tag2"}));
-        }
-//        trip_locs.add("Paris, France");
-//        trip_locs.add("Brooklyn, NY");
-//        trip_locs.add("Menlo Park, CA");
-//        trip_locs.add("Loc 1");
-//        trip_locs.add("Loc 2");
-
-        TripListAdapter adapter = new TripListAdapter(trip_locs);
+        TripListAdapter adapter = new TripListAdapter(DataHolder.get().trips);
         RecyclerView trip_list_view = findViewById(R.id.trip_list);
         trip_list_view.setHasFixedSize(true);
         trip_list_view.setAdapter(adapter);
