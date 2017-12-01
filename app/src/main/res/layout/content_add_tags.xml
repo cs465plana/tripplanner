@@ -71,7 +71,8 @@
         android:fontFamily="@font/roboto_slab"
         android:hint="Add tag"
         android:inputType="text"
-        android:padding="6dp" />
+        android:padding="6dp"
+        android:textColorHint="@color/colorTextHint" />
 
     <ImageButton
         android:id="@+id/add_finish_button"

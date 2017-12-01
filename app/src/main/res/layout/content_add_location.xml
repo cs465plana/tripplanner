@@ -28,6 +28,7 @@
         android:fontFamily="@font/roboto_slab"
         android:hint="Search Location"
         android:inputType="textPostalAddress"
-        android:padding="6dp" />
+        android:padding="6dp"
+        android:textColorHint="@color/colorTextHint" />
 
 </LinearLayout>

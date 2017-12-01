@@ -6,4 +6,5 @@
     <color name="colorTextPrimary">#fefad2</color>
     <color name="colorTextSecondary">#ff8548</color>
     <color name="colorTextDark">#c64200</color>
+    <color name="colorTextHint">#ffc2a4</color>
 </resources>
