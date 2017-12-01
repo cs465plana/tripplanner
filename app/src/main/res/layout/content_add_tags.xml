@@ -22,6 +22,7 @@
     <cs465.tripplanner.RowLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp">
 
@@ -56,5 +57,27 @@
             android:visibility="gone"
             tools:text="#camping"
             tools:visibility="visible" />
+
     </cs465.tripplanner.RowLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_edittext_dark"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_search_24dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto_slab"
+        android:hint="Add tag"
+        android:inputType="text"
+        android:padding="6dp" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/finish_button" />
 </LinearLayout>
