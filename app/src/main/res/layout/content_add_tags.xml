@@ -74,6 +74,7 @@
         android:padding="6dp" />
 
     <ImageButton
+        android:id="@+id/add_finish_button"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
