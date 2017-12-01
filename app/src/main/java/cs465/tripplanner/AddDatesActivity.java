@@ -15,4 +15,9 @@ public class AddDatesActivity extends AddActivity {
         super.onCreate(savedInstanceState);
     }
 
+    @Override
+    public void updateData() {
+
+    }
+
 }

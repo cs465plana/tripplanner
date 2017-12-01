@@ -44,6 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         trip_list_view.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+        llm.setReverseLayout(true);
+        llm.setStackFromEnd(true);
         trip_list_view.setLayoutManager(llm);
     }
 

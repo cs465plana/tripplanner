@@ -1,6 +1,10 @@
 package cs465.tripplanner;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -10,6 +14,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class AddLocationActivity extends AddActivity implements OnMapReadyCallback {
+    private EditText locationInput;
+
     private GoogleMap mMap;
 
     @Override
@@ -26,6 +32,25 @@ public class AddLocationActivity extends AddActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.add_location_map);
         mapFragment.getMapAsync(this);
+
+
+        DataHolder.get().createNewTrip();
+
+        locationInput = findViewById(R.id.add_location_input);
+        locationInput.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView input, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_DONE) {
+                    AddLocationActivity.this.updateData();
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public void updateData() {
+        DataHolder.get().newTrip.setLocation(locationInput.getText().toString());
     }
 
     /**

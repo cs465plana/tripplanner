@@ -1,8 +1,13 @@
 package cs465.tripplanner;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class AddBudgetActivity extends AddActivity {
+    private EditText budgetInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +18,22 @@ public class AddBudgetActivity extends AddActivity {
         backClass = AddLocationActivity.class;
         nextClass = AddDatesActivity.class;
         super.onCreate(savedInstanceState);
+
+        budgetInput = findViewById(R.id.add_budget_input);
+        budgetInput.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView input, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_DONE) {
+                    AddBudgetActivity.this.updateData();
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public void updateData() {
+        DataHolder.get().newTrip.setBudget(budgetInput.getText().toString());
     }
 
 }

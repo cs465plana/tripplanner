@@ -21,7 +21,7 @@
         android:textSize="45dp" />
 
     <EditText
-        android:id="@+id/add_budget_amount"
+        android:id="@+id/add_budget_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/add_budget_dollar_text"
@@ -38,7 +38,7 @@
         android:id="@+id/add_budget_unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_budget_amount"
+        android:layout_alignBaseline="@+id/add_budget_input"
         android:layout_alignParentEnd="true"
         android:fontFamily="@font/roboto_slab_light"
         android:text="per day"
