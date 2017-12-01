@@ -21,10 +21,10 @@
         app:popupTheme="@style/PopupOverlay">
 
         <ImageButton
-            android:id="@+id/tags_back_button"
-            style="@style/ToolbarAddNavButton"
+            android:id="@+id/trip_details_back_button"
+            style="@style/ToolbarNavButton"
             android:layout_gravity="start"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/back_button" />
 
         <TextView
             style="@style/ToolbarAddTextStyle"

@@ -39,22 +39,29 @@
 
         <activity
             android:name=".AddLocationActivity"
-            android:label="@string/title_activity_add_location"></activity>
+            android:label="@string/title_activity_add_location" />
         <activity
             android:name=".AddBudgetActivity"
-            android:label="@string/title_activity_add_budget"></activity>
+            android:label="@string/title_activity_add_budget" />
         <activity
             android:name=".AddDatesActivity"
-            android:label="@string/title_activity_add_dates"></activity>
+            android:label="@string/title_activity_add_dates" />
         <activity
             android:name=".AddTagsActivity"
-            android:label="@string/title_activity_add_tags"></activity>
+            android:label="@string/title_activity_add_tags" />
         <activity
             android:name=".YourTripsActivity"
             android:label="@string/title_activity_your_trips"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity android:name=".SuggestionDetailsActivity" />
-        <activity android:name=".AddSuggestionActivity"></activity>
+        <activity android:name=".AddSuggestionActivity" />
+        <activity android:name=".TripDetailsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

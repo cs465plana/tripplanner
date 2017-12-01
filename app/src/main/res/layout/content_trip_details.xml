@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/trip_image_detail"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/trip_paris"
+                tools:srcCompat="@drawable/trip_paris" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/trip_detail_loc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Paris, France"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
+                    tools:text="Paris, France" />
+
+                <TextView
+                    android:id="@+id/trip_detail_budget_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab_light"
+                    android:text="$120/day"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="16sp"
+                    tools:text="$120/day" />
+
+                <TextView
+                    android:id="@+id/trip_detail_dates_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Jan 21, 2017 - Jan 24, 2017"
+                    android:textColor="@color/colorTextPrimary"
+                    tools:text="Jan 21, 2017 - Jan 24, 2017" />
+
+                <cs465.tripplanner.RowLayout
+                    android:id="@+id/trip_details_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#nature"
+                        android:theme="@style/AppTheme.TagSmall"
+                        tools:text="#nature" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#quiet"
+                        android:theme="@style/AppTheme.TagSmall"
+                        tools:text="#quiet" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#college"
+                        android:theme="@style/AppTheme.TagSmall"
+                        tools:text="#college"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#camping"
+                        android:theme="@style/AppTheme.TagSmall"
+                        tools:text="#camping"
+                        tools:visibility="visible" />
+
+                </cs465.tripplanner.RowLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/suggestion_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            tools:listitem="@layout/suggestion_item_view" />
+
+    </LinearLayout>
+
+</FrameLayout>
