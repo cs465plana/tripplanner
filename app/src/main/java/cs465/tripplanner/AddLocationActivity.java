@@ -24,7 +24,7 @@ public class AddLocationActivity extends AddActivity implements OnMapReadyCallba
         toolbarId = R.id.toolbar_add_location;
         backId = R.id.location_back_button;
         nextId = R.id.location_next_button;
-        backClass = HomeActivity.class;
+        backClass = YourTripsActivity.class;
         nextClass = AddBudgetActivity.class;
         super.onCreate(savedInstanceState);
 

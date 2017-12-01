@@ -29,9 +29,10 @@ public class AddTagsActivity extends AddActivity {
             public void onClick(View view) {
                 DataHolder.get().addNewTrip();
 
-                Intent i = new Intent(AddTagsActivity.this, HomeActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivityIfNeeded(i, 0);
+                Intent i = new Intent(AddTagsActivity.this, YourTripsActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.putExtra("EXIT", true);
+                startActivity(i);
             }
         });
 
