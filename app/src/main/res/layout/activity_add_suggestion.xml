@@ -4,33 +4,12 @@
     android:layout_height="match_parent"
     tools:context="cs465.tripplanner.AddSuggestionActivity"
     android:fitsSystemWindows="true">
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <include
-            layout="@layout/toolbar_add_suggestion"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-    </android.support.design.widget.AppBarLayout>
+    <include
+        layout="@layout/toolbar_add_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
 
     <include layout="@layout/content_add_suggestion" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/addactivitybutton"
-            android:layout_alignParentBottom="true"
-            android:adjustViewBounds="true"
-            />
-
-    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

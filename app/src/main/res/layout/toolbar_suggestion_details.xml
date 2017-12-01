@@ -22,7 +22,7 @@
 
         <ImageButton
             android:id="@+id/suggestion_details_back_button"
-            style="@style/ToolbarAddNavButton"
+            style="@style/ToolbarNavButton"
             android:layout_gravity="start"
             app:srcCompat="@drawable/back_button" />
 
