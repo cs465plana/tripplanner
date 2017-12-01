@@ -2,7 +2,6 @@ package cs465.tripplanner;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,14 +29,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.home_fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(HomeActivity.this, AddLocationActivity.class);
-                startActivity(i);
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.home_fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(HomeActivity.this, AddLocationActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
         TripListAdapter adapter = new TripListAdapter(DataHolder.get().trips);
         RecyclerView trip_list_view = findViewById(R.id.trip_list);
