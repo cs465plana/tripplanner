@@ -36,6 +36,7 @@
             android:hint="Search tags"
             android:inputType="text"
             android:padding="6dp"
+            android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorTextHint" />
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>
