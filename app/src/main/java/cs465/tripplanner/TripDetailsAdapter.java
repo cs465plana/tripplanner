@@ -1,5 +1,6 @@
 package cs465.tripplanner;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,13 +19,13 @@ public class TripDetailsAdapter extends RecyclerView.Adapter<TripDetailsAdapter.
     @Override
     public TripDetailsItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.suggestion_item_view, parent, false);
-//        listItem.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(listItem.getContext(), TripDetailsActivity.class);
-//                listItem.getContext().startActivity(i);
-//            }
-//        });
+        listItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(listItem.getContext(), SuggestionDetailsActivity.class);
+                listItem.getContext().startActivity(i);
+            }
+        });
         return new TripDetailsAdapter.TripDetailsItemHolder(listItem);
     }
 
