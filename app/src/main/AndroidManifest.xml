@@ -39,20 +39,17 @@
 
         <activity
             android:name=".AddLocationActivity"
-            android:label="@string/title_activity_add_location">
-        </activity>
+            android:label="@string/title_activity_add_location"></activity>
         <activity
             android:name=".AddBudgetActivity"
-            android:label="@string/title_activity_add_budget">
-        </activity>
+            android:label="@string/title_activity_add_budget"></activity>
         <activity
             android:name=".AddDatesActivity"
-            android:label="@string/title_activity_add_dates">
-        </activity>
+            android:label="@string/title_activity_add_dates"></activity>
         <activity
             android:name=".AddTagsActivity"
-            android:label="@string/title_activity_add_tags">
-        </activity>
+            android:label="@string/title_activity_add_tags"></activity>
+        <activity android:name=".SuggestionDetailsActivity"></activity>
     </application>
 
 </manifest>

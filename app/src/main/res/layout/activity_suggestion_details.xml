@@ -1,0 +1,14 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cs465.tripplanner.AddTagsActivity">
+
+    <include
+        layout="@layout/toolbar_suggestion_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/content_suggestion_details" />
+
+</android.support.design.widget.CoordinatorLayout>

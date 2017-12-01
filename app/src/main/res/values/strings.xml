@@ -5,5 +5,6 @@
     <string name="title_activity_add_budget">Add Budget</string>
     <string name="title_activity_add_dates">Add Dates</string>
     <string name="title_activity_add_tags">Add Tags</string>
+    <string name="title_activity_suggestion_details">Activity Details</string>
     <string name="action_settings">Settings</string>
 </resources>
