@@ -27,10 +27,10 @@
         android:drawablePadding="10dp"
         android:drawableStart="@drawable/ic_search_24dp"
         android:ems="10"
-        android:fontFamily="@font/roboto_slab"
         android:hint="Search Location"
         android:inputType="textPostalAddress"
         android:padding="6dp"
-        android:textColorHint="@color/colorTextHint" />
+        android:textColorHint="@color/colorTextHint"
+        android:theme="@style/AppTheme.Font" />
 
 </LinearLayout>
