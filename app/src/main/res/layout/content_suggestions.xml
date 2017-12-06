@@ -139,6 +139,7 @@
             android:padding="10dp"
             android:text="Budget remaining:"
             android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:textSize="20sp" />
 
     </LinearLayout>

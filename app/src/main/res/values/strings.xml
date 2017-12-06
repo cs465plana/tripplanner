@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TripPlanner</string>
+    <string name="app_name">PlanA</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_add_location">Add Location</string>
     <string name="title_activity_add_budget">Add Budget</string>

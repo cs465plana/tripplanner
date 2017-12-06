@@ -25,6 +25,7 @@
             android:fontFamily="@font/roboto_slab"
             android:text="Sign up"
             android:textAllCaps="false"
+            android:textColor="@color/colorText"
             android:textSize="20sp" />
 
         <Button
@@ -36,6 +37,7 @@
             android:fontFamily="@font/roboto_slab"
             android:text="Log in"
             android:textAllCaps="false"
+            android:textColor="@color/colorText"
             android:textSize="20sp" />
     </LinearLayout>
 </RelativeLayout>

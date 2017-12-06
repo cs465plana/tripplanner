@@ -34,7 +34,7 @@ public class Suggestion {
     }
 
     public String getPriceString() {
-        return '$' + Float.toString(price);
+        return Data.formatCurrency(price);
     }
 
     public String getComment() {

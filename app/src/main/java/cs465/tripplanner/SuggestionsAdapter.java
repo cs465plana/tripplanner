@@ -43,6 +43,11 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
         if (item.getTrip().getUsername() != Data.get().currentUsername) {
             holder.addButton.setVisibility(View.GONE);
         } else {
+            if (item.isSelected()) {
+                holder.addButton.setImageResource(R.drawable.added_button);
+            } else {
+                holder.addButton.setImageResource(R.drawable.add_button);
+            }
             holder.addButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

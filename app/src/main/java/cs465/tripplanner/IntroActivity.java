@@ -16,7 +16,7 @@ public class IntroActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), TripsActivity.class);
+                Intent i = new Intent(IntroActivity.this, TripsActivity.class);
                 startActivity(i);
             }
         };

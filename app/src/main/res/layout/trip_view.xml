@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_slab_bold"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/colorText"
                 android:textSize="22sp"
                 tools:text="Paris, France" />
 
@@ -48,7 +48,7 @@
                 android:layout_marginBottom="6dp"
                 android:fontFamily="@font/roboto_slab_light"
                 android:text="TextView"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/colorText"
                 android:textSize="16sp"
                 tools:text="Budget: $120/day" />
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_slab"
                 android:text="TextView"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/colorText"
                 tools:text="#romantic #instagram" />
 
             <TextView
@@ -67,6 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="bottom|right"
+                android:textColor="@color/colorText"
                 tools:text="posted by Username" />
         </LinearLayout>
 

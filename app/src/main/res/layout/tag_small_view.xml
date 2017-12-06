@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tag_small_view_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.TagSmall" />
+    android:textColor="@color/colorText"
+    android:theme="@style/AppTheme.TagSmall"
+    tools:text="#tag" />

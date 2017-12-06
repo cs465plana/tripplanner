@@ -1,11 +1,13 @@
 package cs465.tripplanner.data;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Trip {
     private String username;
     private String location;
     private int budget;
+    public Date startDate, endDate;
     private ArrayList<String> tags;
     private ArrayList<Suggestion> suggestions;
 
@@ -36,7 +38,7 @@ public class Trip {
     }
 
     public String getBudgetString() {
-        return "$" + budget;
+        return Data.formatCurrency(budget);
     }
 
     public String getBudgetRemainingString() {
@@ -46,7 +48,7 @@ public class Trip {
                 budget -= s.getPrice();
             }
         }
-        return "$" + budget;
+        return Data.formatCurrency(budget);
     }
 
     public ArrayList<String> getTags() {

@@ -1,5 +1,7 @@
 package cs465.tripplanner.data;
 
+import android.icu.text.NumberFormat;
+
 import java.util.ArrayList;
 
 public class Data {
@@ -8,6 +10,8 @@ public class Data {
     public static Data get() {
         return singleton;
     }
+
+    public static NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     public String currentUsername;
 
@@ -46,5 +50,16 @@ public class Data {
 
     public void addNewTrip() {
         yourTrips.add(newTrip);
+    }
+
+    public static String formatCurrency(float currency) {
+        String s = formatter.format(currency);
+        if (s.endsWith(".00")) {
+            int centsIndex = s.lastIndexOf(".00");
+            if (centsIndex != -1) {
+                s = s.substring(0, centsIndex);
+            }
+        }
+        return s;
     }
 }
