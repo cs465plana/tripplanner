@@ -28,10 +28,11 @@ public class Data {
     public Suggestion currentSuggestion;
 
     public Data() {
-        currentUsername = "current_user";
+        this.currentUsername = "current user";
+        Trip trip;
 
         for (int i = 0; i < 10; i++) {
-            Trip trip = new Trip("User " + i, "Location " + i, 100 * i, new String[]{"tag1", "tag2"});
+            trip = new Trip("User " + i, "Location " + i, 1000 * i, new String[]{"tag1", "tag2"});
             trip.startDate = new Date();
             trip.endDate = new Date();
             trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion", 10, "Nice place"));
@@ -42,7 +43,15 @@ public class Data {
             }
             trips.add(trip);
         }
-        Trip trip = new Trip(currentUsername, "Brooklyn, NY", 100, new String[]{"photogenic", "crowd"});
+
+        trip = new Trip("Mickey", "Manhattan, NY", 1000, new String[]{"romantic", "instagram"});
+        trip.startDate = new Date();
+        trip.endDate = new Date();
+        trip.addSuggestion(new Suggestion(trip, "Another user", "Met", 10, "Nice place"));
+        trips.add(trip);
+
+
+        trip = new Trip(currentUsername, "Brooklyn, NY", 100, new String[]{"photogenic", "crowd"});
         trip.startDate = new Date();
         trip.endDate = new Date();
         for (int j = 0; j < 10; j++) {
