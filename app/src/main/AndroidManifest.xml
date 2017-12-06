@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".HomeActivity"
+            android:name=".SplashActivity"
             android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home Activity" />
         <activity
             android:name=".AddLocationActivity"
             android:label="@string/title_activity_add_location" />
@@ -55,8 +57,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".SuggestionDetailsActivity" />
         <activity android:name=".AddSuggestionActivity" />
-        <activity android:name=".TripDetailsActivity">
-        </activity>
+        <activity android:name=".TripDetailsActivity"></activity>
     </application>
 
 </manifest>
