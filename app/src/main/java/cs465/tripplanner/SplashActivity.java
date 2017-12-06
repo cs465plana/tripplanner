@@ -57,6 +57,7 @@ public class SplashActivity extends AppCompatActivity {
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3,
+                R.layout.welcome_slide4
                 };
 
         // adding bottom dots
