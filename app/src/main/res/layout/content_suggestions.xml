@@ -23,8 +23,9 @@
             <ImageView
                 android:id="@+id/trip_image_detail"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="match_parent"
                 android:adjustViewBounds="true"
+                android:minHeight="150dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/trip_paris"
                 tools:srcCompat="@drawable/trip_paris" />
@@ -38,7 +39,7 @@
                 android:padding="15dp">
 
                 <TextView
-                    android:id="@+id/trip_detail_loc_text"
+                    android:id="@+id/suggestions_loc_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_slab_bold"
@@ -48,13 +49,13 @@
                     tools:text="Paris, France" />
 
                 <TextView
-                    android:id="@+id/trip_detail_budget_text"
+                    android:id="@+id/suggestions_budget_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_slab_light"
                     android:text="$120/day"
                     android:textColor="@color/colorTextPrimary"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     tools:text="$120/day" />
 
                 <TextView
@@ -68,7 +69,7 @@
                     tools:text="Jan 21, 2017 - Jan 24, 2017" />
 
                 <com.example.view.RowLayout
-                    android:id="@+id/item_details_tags_list"
+                    android:id="@+id/suggestions_tags_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:horizontalSpacing="5dp"
@@ -79,20 +80,25 @@
                         android:layout_height="wrap_content"
                         android:text="#nature"
                         android:theme="@style/AppTheme.TagSmall"
-                        tools:text="#nature" />
+                        android:visibility="gone"
+                        tools:text="#nature"
+                        tools:visibility="visible" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="#quiet"
                         android:theme="@style/AppTheme.TagSmall"
-                        tools:text="#quiet" />
+                        android:visibility="gone"
+                        tools:text="#quiet"
+                        tools:visibility="visible" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="#college"
                         android:theme="@style/AppTheme.TagSmall"
+                        android:visibility="gone"
                         tools:text="#college"
                         tools:visibility="visible" />
 
@@ -101,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:text="#camping"
                         android:theme="@style/AppTheme.TagSmall"
+                        android:visibility="gone"
                         tools:text="#camping"
                         tools:visibility="visible" />
 
@@ -118,7 +125,20 @@
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
             android:paddingTop="20dp"
-            tools:listitem="@layout/suggestion_view" />
+            tools:listitem="@layout/suggestion_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/suggestions_budget_remaining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="@font/roboto_slab"
+            android:padding="10dp"
+            android:text="Budget remaining:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

@@ -6,6 +6,7 @@ public class Suggestion {
     private String title;
     private float price;
     private String comment;
+    private boolean isSelected;
 
     public Suggestion(Trip trip, String username, String title, float price, String comment) {
         this.trip = trip;
@@ -13,6 +14,7 @@ public class Suggestion {
         this.title = title;
         this.price = price;
         this.comment = comment;
+        this.isSelected = false;
     }
 
     public Trip getTrip() {
@@ -27,11 +29,23 @@ public class Suggestion {
         return title;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
     public String getPriceString() {
         return '$' + Float.toString(price);
     }
 
     public String getComment() {
         return comment;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void select() {
+        isSelected = !isSelected;
     }
 }

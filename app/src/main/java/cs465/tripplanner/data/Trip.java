@@ -39,6 +39,16 @@ public class Trip {
         return "$" + budget;
     }
 
+    public String getBudgetRemainingString() {
+        float budget = (float) this.budget;
+        for (Suggestion s : suggestions) {
+            if (s.isSelected()) {
+                budget -= s.getPrice();
+            }
+        }
+        return "$" + budget;
+    }
+
     public ArrayList<String> getTags() {
         return tags;
     }

@@ -25,7 +25,7 @@
             app:popupTheme="@style/PopupOverlay">
 
             <ImageButton
-                android:id="@+id/trip_details_back_button"
+                android:id="@+id/suggestions_back_button"
                 style="@style/ToolbarNavButton"
                 android:layout_gravity="start"
                 app:srcCompat="@drawable/back_button" />

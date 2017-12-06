@@ -33,12 +33,10 @@
 
 
             <ImageView
-                android:id="@+id/add_status"
-                android:layout_width="wrap_content"
+                android:id="@+id/suggestion_add_button"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

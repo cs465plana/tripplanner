@@ -29,6 +29,9 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     @Override
     public void onBindViewHolder(SuggestionHolder holder, int position) {
         final Suggestion item = list.get(position);
+        holder.usernameView.setText("suggested by " + item.getUsername());
+        holder.titleView.setText(item.getTitle());
+        holder.priceView.setText(item.getPriceString());
         holder.moreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,9 +40,21 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
                 view.getContext().startActivity(i);
             }
         });
-        holder.usernameView.setText("suggested by " + item.getUsername());
-        holder.titleView.setText(item.getTitle());
-        holder.priceView.setText(item.getPriceString());
+        holder.addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView button = (ImageView) view;
+                item.select();
+                if (item.isSelected()) {
+                    button.setImageResource(R.drawable.added_button);
+                } else {
+                    button.setImageResource(R.drawable.add_button);
+                }
+                SuggestionsActivity activity = (SuggestionsActivity) view.getContext();
+                TextView remaining = activity.findViewById(R.id.suggestions_budget_remaining);
+                remaining.setText("Budget remaining: " + Data.get().currentTrip.getBudgetRemainingString());
+            }
+        });
     }
 
     @Override
@@ -52,6 +67,7 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
         private TextView titleView;
         private TextView priceView;
         private ImageView moreButton;
+        private ImageView addButton;
 
         public SuggestionHolder(View itemView) {
             super(itemView);
@@ -59,6 +75,7 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
             titleView = itemView.findViewById(R.id.suggestion_title);
             priceView = itemView.findViewById(R.id.suggestion_price);
             moreButton = itemView.findViewById(R.id.suggestion_more_button);
+            addButton = itemView.findViewById(R.id.suggestion_add_button);
         }
     }
 }

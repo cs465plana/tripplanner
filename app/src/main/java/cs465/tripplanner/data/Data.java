@@ -24,10 +24,10 @@ public class Data {
 
         for (int i = 0; i < 10; i++) {
             Trip trip = new Trip("User " + i, "Location " + i, 100 * i, new String[]{"tag1", "tag2"});
-            trip.addSuggestion(new Suggestion(trip, currentUsername, "Suggestion", 10, "Nice place"));
+            trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion", 10, "Nice place"));
             if (i == 9) {
                 for (int j = 0; j < 10; j++) {
-                    trip.addSuggestion(new Suggestion(trip, currentUsername, "Suggestion", 10, "Nice place"));
+                    trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion " + j, j * 10, "Nice place"));
                 }
             }
             trips.add(trip);

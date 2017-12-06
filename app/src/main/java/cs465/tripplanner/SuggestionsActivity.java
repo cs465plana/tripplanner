@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.view.RowLayout;
+
 import cs465.tripplanner.data.Data;
 
 public class SuggestionsActivity extends AppCompatActivity {
@@ -28,7 +30,7 @@ public class SuggestionsActivity extends AppCompatActivity {
         llm.setStackFromEnd(true);
         recyclerView.setLayoutManager(llm);
 
-        ImageButton backButton = findViewById(R.id.trip_details_back_button);
+        ImageButton backButton = findViewById(R.id.suggestions_back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,12 +38,20 @@ public class SuggestionsActivity extends AppCompatActivity {
             }
         });
 
-        TextView locTextView = findViewById(R.id.trip_detail_loc_text);
+        TextView locTextView = findViewById(R.id.suggestions_loc_text);
         locTextView.setText(Data.get().currentTrip.getLocationString());
 
-        TextView budgetTextView = findViewById(R.id.trip_detail_budget_text);
+        TextView budgetTextView = findViewById(R.id.suggestions_budget_text);
         budgetTextView.setText(Data.get().currentTrip.getBudgetString());
 
+        RowLayout tagsView = findViewById(R.id.suggestions_tags_list);
+        for (String tag : Data.get().currentTrip.getTags()) {
+            TextView tagTextView = (TextView) getLayoutInflater().inflate(R.layout.tag_small_view, null);
+            tagTextView.setText('#' + tag);
+            tagsView.addView(tagTextView);
+        }
 
+        TextView budgetRemainingView = findViewById(R.id.suggestions_budget_remaining);
+        budgetRemainingView.setText("Budget remaining: " + Data.get().currentTrip.getBudgetRemainingString());
     }
 }

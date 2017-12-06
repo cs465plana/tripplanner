@@ -28,14 +28,15 @@ public class SuggestionDetailsActivity extends AppCompatActivity {
         TextView priceView = findViewById(R.id.suggestion_details_price);
         priceView.setText(Data.get().currentSuggestion.getPriceString());
 
+        RowLayout tagsView = findViewById(R.id.suggestion_details_tags);
         for (String tag : Data.get().currentSuggestion.getTrip().getTags()) {
             TextView tagTextView = (TextView) getLayoutInflater().inflate(R.layout.tag_view, null);
-            RowLayout tagsView = findViewById(R.id.suggestion_details_tags);
             tagTextView.setText('#' + tag);
             tagsView.addView(tagTextView);
         }
 
         TextView commentsView = findViewById(R.id.suggestion_details_comments);
         commentsView.setText(Data.get().currentSuggestion.getComment());
+
     }
 }
