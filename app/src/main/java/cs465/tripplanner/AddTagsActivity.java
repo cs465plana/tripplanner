@@ -3,7 +3,6 @@ package cs465.tripplanner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
@@ -34,8 +33,8 @@ public class AddTagsActivity extends AddActivity {
                 Data.get().addNewTrip();
 
                 Intent i = new Intent(AddTagsActivity.this, TripsActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.putExtra("EXIT", true);
+//                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                i.putExtra("EXIT", true);
                 startActivity(i);
             }
         });
@@ -46,8 +45,6 @@ public class AddTagsActivity extends AddActivity {
             @Override
             public boolean onEditorAction(TextView tagInput, int i, KeyEvent keyEvent) {
                 if (i == EditorInfo.IME_ACTION_DONE) {
-                    View tagView = LayoutInflater.from(AddTagsActivity.this).inflate(R.layout.tag_view, tagsLayout, false);
-
                     String tag = tagInput.getText().toString();
                     if (!tag.isEmpty()) {
                         Data.get().newTrip.addTag(tag);
@@ -55,7 +52,7 @@ public class AddTagsActivity extends AddActivity {
                         TextView tagViewText = (TextView) AddTagsActivity.this.getLayoutInflater().inflate(R.layout.tag_small_view, null);
                         tagViewText.setText('#' + tag);
 
-                        tagsLayout.addView(tagView);
+                        tagsLayout.addView(tagViewText);
 
                         tagInput.setText("");
 

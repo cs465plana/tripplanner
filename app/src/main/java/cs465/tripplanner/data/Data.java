@@ -1,8 +1,11 @@
 package cs465.tripplanner.data;
 
 import android.icu.text.NumberFormat;
+import android.icu.text.SimpleDateFormat;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class Data {
     public static Data singleton = new Data();
@@ -11,6 +14,7 @@ public class Data {
         return singleton;
     }
 
+    public static SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM dd, yyyy", Locale.US);
     public static NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     public String currentUsername;
@@ -28,6 +32,8 @@ public class Data {
 
         for (int i = 0; i < 10; i++) {
             Trip trip = new Trip("User " + i, "Location " + i, 100 * i, new String[]{"tag1", "tag2"});
+            trip.startDate = new Date();
+            trip.endDate = new Date();
             trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion", 10, "Nice place"));
             if (i == 9) {
                 for (int j = 0; j < 10; j++) {
@@ -37,6 +43,8 @@ public class Data {
             trips.add(trip);
         }
         Trip trip = new Trip(currentUsername, "Brooklyn, NY", 100, new String[]{"photogenic", "crowd"});
+        trip.startDate = new Date();
+        trip.endDate = new Date();
         for (int j = 0; j < 10; j++) {
             trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion " + j, j * 10, "Nice place"));
         }

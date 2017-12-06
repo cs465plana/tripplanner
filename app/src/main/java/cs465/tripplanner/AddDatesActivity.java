@@ -1,7 +1,6 @@
 package cs465.tripplanner;
 
 import android.app.DatePickerDialog;
-import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 import java.util.Date;
-import java.util.Locale;
 
 import cs465.tripplanner.data.Data;
 
@@ -19,8 +17,6 @@ public class AddDatesActivity extends AddActivity {
     Calendar myCalendar;
     Date from;
     Date to;
-
-    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy", Locale.US);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +45,7 @@ public class AddDatesActivity extends AddActivity {
                         myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
                         from = myCalendar.getTime();
-                        addDatesFrom.setText(sdf.format(from));
+                        addDatesFrom.setText(Data.dateFormatter.format(from));
                     }
                 }, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
@@ -71,7 +67,7 @@ public class AddDatesActivity extends AddActivity {
                         myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
                         to = myCalendar.getTime();
-                        addDatesTo.setText(sdf.format(to));
+                        addDatesTo.setText(Data.dateFormatter.format(to));
                     }
                 }, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),

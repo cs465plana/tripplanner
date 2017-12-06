@@ -20,7 +20,6 @@ public class Trip {
         setLocation(location);
         this.budget = budget;
         this.tags = new ArrayList<>();
-        addTag("test");
         if (tags != null) {
             for (String tag : tags) {
                 addTag(tag);
@@ -49,6 +48,11 @@ public class Trip {
             }
         }
         return Data.formatCurrency(budget);
+    }
+
+    public String getDatesString() {
+        if (startDate == null || endDate == null) return "";
+        return Data.dateFormatter.format(startDate) + " - " + Data.dateFormatter.format(endDate);
     }
 
     public ArrayList<String> getTags() {

@@ -62,6 +62,9 @@ public class SuggestionsActivity extends AppCompatActivity {
         TextView budgetTextView = findViewById(R.id.suggestions_budget_text);
         budgetTextView.setText(Data.get().currentTrip.getBudgetString());
 
+        TextView datesTextView = findViewById(R.id.suggestions_dates_text);
+        datesTextView.setText(Data.get().currentTrip.getDatesString());
+
         RowLayout tagsView = findViewById(R.id.suggestions_tags_list);
         for (String tag : Data.get().currentTrip.getTags()) {
             TextView tagTextView = (TextView) getLayoutInflater().inflate(R.layout.tag_small_view, null);
