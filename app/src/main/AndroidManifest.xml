@@ -19,11 +19,6 @@
         <activity
             android:name=".TripsActivity"
             android:label="@string/title_activity_home">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -51,7 +46,13 @@
             android:label="@string/title_activity_add_tags" />
         <activity android:name=".SuggestionDetailsActivity" />
         <activity android:name=".AddSuggestionActivity" />
-        <activity android:name=".SuggestionsActivity">
+        <activity android:name=".SuggestionsActivity"></activity>
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

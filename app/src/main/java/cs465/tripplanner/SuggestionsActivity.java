@@ -1,6 +1,8 @@
 package cs465.tripplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,18 +15,34 @@ import com.example.view.RowLayout;
 import cs465.tripplanner.data.Data;
 
 public class SuggestionsActivity extends AppCompatActivity {
+    SuggestionsAdapter adapter;
+    LinearLayoutManager llm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggestions);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_suggestions);
+        if (Data.get().currentTrip.getUsername() == Data.get().currentUsername) {
+            fab.setVisibility(View.GONE);
+        } else {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(), AddSuggestionActivity.class);
+                    startActivity(i);
+                }
+            });
+
+        }
+
         RecyclerView recyclerView = findViewById(R.id.suggestions_list);
 
-        SuggestionsAdapter adapter = new SuggestionsAdapter(Data.get().currentTrip.getSuggestions());
+        adapter = new SuggestionsAdapter(Data.get().currentTrip.getSuggestions());
         recyclerView.setAdapter(adapter);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         llm.setReverseLayout(true);
         llm.setStackFromEnd(true);
@@ -53,5 +71,11 @@ public class SuggestionsActivity extends AppCompatActivity {
 
         TextView budgetRemainingView = findViewById(R.id.suggestions_budget_remaining);
         budgetRemainingView.setText("Budget remaining: " + Data.get().currentTrip.getBudgetRemainingString());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.notifyDataSetChanged();
     }
 }

@@ -52,7 +52,7 @@ public class AddTagsActivity extends AddActivity {
                     if (!tag.isEmpty()) {
                         Data.get().newTrip.addTag(tag);
 
-                        TextView tagViewText = tagView.findViewById(R.id.tag_small_view_text);
+                        TextView tagViewText = (TextView) AddTagsActivity.this.getLayoutInflater().inflate(R.layout.tag_small_view, null);
                         tagViewText.setText('#' + tag);
 
                         tagsLayout.addView(tagView);

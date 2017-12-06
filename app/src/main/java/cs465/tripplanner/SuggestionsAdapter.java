@@ -40,21 +40,25 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
                 view.getContext().startActivity(i);
             }
         });
-        holder.addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImageView button = (ImageView) view;
-                item.select();
-                if (item.isSelected()) {
-                    button.setImageResource(R.drawable.added_button);
-                } else {
-                    button.setImageResource(R.drawable.add_button);
+        if (item.getTrip().getUsername() != Data.get().currentUsername) {
+            holder.addButton.setVisibility(View.GONE);
+        } else {
+            holder.addButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ImageView button = (ImageView) view;
+                    item.select();
+                    if (item.isSelected()) {
+                        button.setImageResource(R.drawable.added_button);
+                    } else {
+                        button.setImageResource(R.drawable.add_button);
+                    }
+                    SuggestionsActivity activity = (SuggestionsActivity) view.getContext();
+                    TextView remaining = activity.findViewById(R.id.suggestions_budget_remaining);
+                    remaining.setText("Budget remaining: " + Data.get().currentTrip.getBudgetRemainingString());
                 }
-                SuggestionsActivity activity = (SuggestionsActivity) view.getContext();
-                TextView remaining = activity.findViewById(R.id.suggestions_budget_remaining);
-                remaining.setText("Budget remaining: " + Data.get().currentTrip.getBudgetRemainingString());
-            }
-        });
+            });
+        }
     }
 
     @Override

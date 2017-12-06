@@ -34,14 +34,4 @@
         android:textSize="45dp"
         tools:text="100" />
 
-    <TextView
-        android:id="@+id/add_budget_unit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/add_budget_input"
-        android:layout_alignParentEnd="true"
-        android:fontFamily="@font/roboto_slab_light"
-        android:text="per day"
-        android:textSize="30sp" />
-
 </RelativeLayout>

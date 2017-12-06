@@ -11,7 +11,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/colorPrimary">
 
@@ -22,6 +22,7 @@
             android:padding="20dp">
 
             <EditText
+                android:id="@+id/add_suggestion_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -85,7 +86,8 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:id="@+id/add_suggestion_price"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="Cost"
@@ -103,6 +105,7 @@
                 android:textSize="24sp" />
 
             <EditText
+                android:id="@+id/add_suggestion_comment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -111,21 +114,21 @@
                 android:textSize="20sp"
                 android:theme="@style/AppTheme.Input1" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_slab"
-                android:text="Photos"
-                android:textSize="24sp" />
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:fontFamily="@font/roboto_slab"-->
+            <!--android:text="Photos"-->
+            <!--android:textSize="24sp" />-->
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/add_activity_button"
+        android:id="@+id/add_suggestion_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        android:drawableLeft="@drawable/ic_add_24dp"
+        android:drawableStart="@drawable/ic_add_24dp"
         android:fontFamily="@font/roboto_slab"
         android:paddingEnd="60dp"
         android:paddingStart="60dp"

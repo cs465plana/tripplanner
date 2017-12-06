@@ -15,13 +15,14 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/suggestions_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/trip_image_detail"
+                android:id="@+id/suggestions_image"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
@@ -59,7 +60,7 @@
                     tools:text="$120/day" />
 
                 <TextView
-                    android:id="@+id/trip_detail_dates_text"
+                    android:id="@+id/suggestions_dates_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"

@@ -32,7 +32,11 @@ public class Data {
             }
             trips.add(trip);
         }
-        yourTrips.add(new Trip(currentUsername, "Brooklyn, NY", 100, new String[]{"photogenic", "crowd"}));
+        Trip trip = new Trip(currentUsername, "Brooklyn, NY", 100, new String[]{"photogenic", "crowd"});
+        for (int j = 0; j < 10; j++) {
+            trip.addSuggestion(new Suggestion(trip, "Another user", "Suggestion " + j, j * 10, "Nice place"));
+        }
+        yourTrips.add(trip);
     }
 
     public Trip createNewTrip() {
