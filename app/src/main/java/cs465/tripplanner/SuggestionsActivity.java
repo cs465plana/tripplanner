@@ -6,30 +6,27 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-import java.util.ArrayList;
+import cs465.tripplanner.data.Data;
 
-public class TripDetailsActivity extends AppCompatActivity {
+public class SuggestionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trip_details);
+        setContentView(R.layout.activity_suggestions);
 
-        ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(" ");
-        }
+        RecyclerView recyclerView = findViewById(R.id.suggestions_list);
 
-        TripDetailsAdapter adapter = new TripDetailsAdapter(list);
-        RecyclerView suggestionListView = findViewById(R.id.suggestion_list);
-        suggestionListView.setHasFixedSize(true);
-        suggestionListView.setAdapter(adapter);
+        SuggestionsAdapter adapter = new SuggestionsAdapter(Data.get().currentTrip.getSuggestions());
+        recyclerView.setAdapter(adapter);
+
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         llm.setReverseLayout(true);
         llm.setStackFromEnd(true);
-        suggestionListView.setLayoutManager(llm);
+        recyclerView.setLayoutManager(llm);
 
         ImageButton backButton = findViewById(R.id.trip_details_back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -38,5 +35,13 @@ public class TripDetailsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        TextView locTextView = findViewById(R.id.trip_detail_loc_text);
+        locTextView.setText(Data.get().currentTrip.getLocationString());
+
+        TextView budgetTextView = findViewById(R.id.trip_detail_budget_text);
+        budgetTextView.setText(Data.get().currentTrip.getBudgetString());
+
+
     }
 }

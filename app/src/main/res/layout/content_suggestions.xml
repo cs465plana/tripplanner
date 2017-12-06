@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_suggestions">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:descendantFocusability="blocksDescendants"
         android:orientation="vertical">
 
@@ -17,24 +18,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:orientation="horizontal"
-            android:padding="20dp">
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/trip_image_detail"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginEnd="20dp"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/trip_paris"
                 tools:srcCompat="@drawable/trip_paris" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/trip_detail_loc_text"
@@ -43,7 +44,7 @@
                     android:fontFamily="@font/roboto_slab_bold"
                     android:text="Paris, France"
                     android:textColor="@color/colorTextPrimary"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
                     tools:text="Paris, France" />
 
                 <TextView
@@ -53,7 +54,7 @@
                     android:fontFamily="@font/roboto_slab_light"
                     android:text="$120/day"
                     android:textColor="@color/colorTextPrimary"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     tools:text="$120/day" />
 
                 <TextView
@@ -66,8 +67,8 @@
                     android:textColor="@color/colorTextPrimary"
                     tools:text="Jan 21, 2017 - Jan 24, 2017" />
 
-                <cs465.tripplanner.RowLayout
-                    android:id="@+id/trip_details_list"
+                <com.example.view.RowLayout
+                    android:id="@+id/item_details_tags_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:horizontalSpacing="5dp"
@@ -103,17 +104,21 @@
                         tools:text="#camping"
                         tools:visibility="visible" />
 
-                </cs465.tripplanner.RowLayout>
+                </com.example.view.RowLayout>
             </LinearLayout>
 
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/suggestion_list"
+            android:id="@+id/suggestions_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
             android:paddingTop="20dp"
-            tools:listitem="@layout/suggestion_item_view" />
+            tools:listitem="@layout/suggestion_view" />
 
     </LinearLayout>
 

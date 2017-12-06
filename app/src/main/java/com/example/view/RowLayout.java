@@ -1,4 +1,4 @@
-package cs465.tripplanner;
+package com.example.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import cs465.tripplanner.R;
 
 // https://stackoverflow.com/questions/5467398/android-how-can-i-make-text-views-float-to-the-left
 public class RowLayout extends ViewGroup {

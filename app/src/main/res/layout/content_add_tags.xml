@@ -19,7 +19,7 @@
         android:text="Your tags"
         android:textSize="20sp" />
 
-    <cs465.tripplanner.RowLayout
+    <com.example.view.RowLayout
         android:id="@+id/add_tags_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             tools:text="#camping"
             tools:visibility="visible" />
 
-    </cs465.tripplanner.RowLayout>
+    </com.example.view.RowLayout>
 
     <EditText
         android:id="@+id/add_tags_input"

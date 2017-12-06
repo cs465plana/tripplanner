@@ -1,14 +1,46 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cs465.tripplanner.AddSuggestionActivity"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context="cs465.tripplanner.AddSuggestionActivity">
 
-    <include
-        layout="@layout/toolbar_add_suggestion"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize" />
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_add_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:contentInsetEnd="@dimen/toolbar_padding"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="@dimen/toolbar_padding"
+            app:contentInsetEnd="@dimen/toolbar_padding"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="@dimen/toolbar_padding"
+            app:popupTheme="@style/PopupOverlay">
+
+            <ImageButton
+                android:id="@+id/add_suggestion_back_button"
+                style="@style/ToolbarNavButton"
+                android:layout_gravity="start"
+                app:srcCompat="@drawable/back_button" />
+
+            <TextView
+                style="@style/ToolbarAddTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_activity_add_suggestion"
+                android:textColor="@color/colorTextPrimary" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_add_suggestion" />
 

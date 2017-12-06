@@ -16,22 +16,25 @@
         android:src="@drawable/burger_img"
         android:adjustViewBounds="true"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="105dp">
-        <cs465.tripplanner.RowLayout
-            android:id="@+id/tag_section"
+        android:layout_height="wrap_content">
+
+        <com.example.view.RowLayout
+            android:id="@+id/suggestion_details_tags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
             android:horizontalSpacing="10dp"
-            android:verticalSpacing="10dp"
-            android:paddingLeft="25dp">
+            android:paddingLeft="25dp"
+            android:verticalSpacing="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:theme="@style/AppTheme.Tag"
                 android:visibility="gone"
                 tools:text="#soulfood"
@@ -62,93 +65,50 @@
                 tools:visibility="visible" />
 
 
-        </cs465.tripplanner.RowLayout>
+        </com.example.view.RowLayout>
+
+        <TextView
+            android:id="@+id/suggestion_details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/suggestion_details_tags"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="$20"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/tag_section"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="$20"
-            android:textSize="32dp" />
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="5dp"
+            android:text="Comments"
+            android:textSize="24sp" />
 
-    </RelativeLayout>
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:stretchColumns="1"
-        >
-
-        <TableRow android:layout_height="1dp"
-            android:background="#BDBDBD">
-            <TextView android:layout_span="1"
-                android:layout_height="1dp"
-                android:layout_width="match_parent"
-                android:text="">
-            </TextView>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:text="Comments"
-                android:textSize="18dip"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="25dp"/>
-        </TableRow>
-
-        <TableRow android:layout_height="1dp"
-            android:background="#BDBDBD">
-            <TextView android:layout_span="1"
-                android:layout_height="1dp"
-                android:layout_width="match_parent"
-                android:text="">
-            </TextView>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut massa quam, posuere ut metus fermentum, vestibulum lobortis est. ..."
-                android:textSize="18dp"
-                android:layout_weight="1"
-                android:ellipsize="none"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="25dp"
-                />
-        </TableRow>
-
-        <TableRow android:layout_height="1dp"
-            android:background="#BDBDBD">
-            <TextView android:layout_span="1"
-                android:layout_height="1dp"
-                android:layout_width="match_parent"
-                android:text="">
-            </TextView>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:text="Photos"
-                android:textSize="18dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="25dp"/>
-        </TableRow>
-
-        <TableRow android:layout_height="1dp"
-            android:background="#BDBDBD">
-            <TextView android:layout_span="1"
-                android:layout_height="1dp"
-                android:layout_width="match_parent"
-                android:text="">
-            </TextView>
-        </TableRow>
-
-
-    </TableLayout>
+        <TextView
+            android:id="@+id/suggestion_details_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:maxLines="100"
+            android:scrollHorizontally="false"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut massa quam, posuere ut metus fermentum, vestibulum lobortis est. ..."
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </LinearLayout>

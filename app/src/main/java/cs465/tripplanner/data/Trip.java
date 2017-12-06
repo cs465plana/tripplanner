@@ -1,30 +1,33 @@
-package cs465.tripplanner;
+package cs465.tripplanner.data;
 
 import java.util.ArrayList;
 
-class TripItem {
+public class Trip {
     private String username;
     private String location;
     private int budget;
     private ArrayList<String> tags;
+    private ArrayList<Suggestion> suggestions;
 
-    public TripItem(String username) {
+    public Trip(String username) {
         this(username, null, -1, null);
     }
 
-    public TripItem(String username, String location, int budget, String[] tags) {
+    public Trip(String username, String location, int budget, String[] tags) {
         this.username = username;
-        this.location = location;
+        setLocation(location);
         this.budget = budget;
         this.tags = new ArrayList<>();
+        addTag("test");
         if (tags != null) {
             for (String tag : tags) {
                 addTag(tag);
             }
         }
+        this.suggestions = new ArrayList<>();
     }
 
-    public String getUsernameString() {
+    public String getUsername() {
         return username;
     }
 
@@ -33,7 +36,11 @@ class TripItem {
     }
 
     public String getBudgetString() {
-        return "Budget: $" + budget + "/day";
+        return "$" + budget;
+    }
+
+    public ArrayList<String> getTags() {
+        return tags;
     }
 
     public String getTagsString() {
@@ -44,6 +51,10 @@ class TripItem {
             sb.append(' ');
         }
         return sb.toString();
+    }
+
+    public ArrayList<Suggestion> getSuggestions() {
+        return suggestions;
     }
 
     public void setLocation(String loc) {
@@ -61,4 +72,9 @@ class TripItem {
     public void addTag(String tag) {
         tags.add(tag);
     }
+
+    public void addSuggestion(Suggestion suggestion) {
+        suggestions.add(suggestion);
+    }
+
 }

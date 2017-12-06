@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.view.RowLayout;
+
+import cs465.tripplanner.data.Data;
+
 public class AddTagsActivity extends AddActivity {
     private ImageButton finishButton;
 
@@ -27,9 +31,9 @@ public class AddTagsActivity extends AddActivity {
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DataHolder.get().addNewTrip();
+                Data.get().addNewTrip();
 
-                Intent i = new Intent(AddTagsActivity.this, YourTripsActivity.class);
+                Intent i = new Intent(AddTagsActivity.this, TripsActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 i.putExtra("EXIT", true);
                 startActivity(i);
@@ -46,9 +50,9 @@ public class AddTagsActivity extends AddActivity {
 
                     String tag = tagInput.getText().toString();
                     if (!tag.isEmpty()) {
-                        DataHolder.get().newTrip.addTag(tag);
+                        Data.get().newTrip.addTag(tag);
 
-                        TextView tagViewText = tagView.findViewById(R.id.tag_view_text);
+                        TextView tagViewText = tagView.findViewById(R.id.tag_small_view_text);
                         tagViewText.setText('#' + tag);
 
                         tagsLayout.addView(tagView);

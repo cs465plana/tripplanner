@@ -13,6 +13,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import cs465.tripplanner.data.Data;
+
 public class AddLocationActivity extends AddActivity implements OnMapReadyCallback {
     private EditText locationInput;
 
@@ -24,7 +26,7 @@ public class AddLocationActivity extends AddActivity implements OnMapReadyCallba
         toolbarId = R.id.toolbar_add_location;
         backId = R.id.location_back_button;
         nextId = R.id.location_next_button;
-        backClass = YourTripsActivity.class;
+        backClass = TripsActivity.class;
         nextClass = AddBudgetActivity.class;
         super.onCreate(savedInstanceState);
 
@@ -34,7 +36,7 @@ public class AddLocationActivity extends AddActivity implements OnMapReadyCallba
         mapFragment.getMapAsync(this);
 
 
-        DataHolder.get().createNewTrip();
+        Data.get().createNewTrip();
 
         locationInput = findViewById(R.id.add_location_input);
         locationInput.setOnEditorActionListener(new EditText.OnEditorActionListener() {
@@ -50,7 +52,7 @@ public class AddLocationActivity extends AddActivity implements OnMapReadyCallba
 
     @Override
     public void updateData() {
-        DataHolder.get().newTrip.setLocation(locationInput.getText().toString());
+        Data.get().newTrip.setLocation(locationInput.getText().toString());
     }
 
     /**

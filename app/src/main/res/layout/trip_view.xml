@@ -9,47 +9,43 @@
     app:cardCornerRadius="4dp"
     app:cardElevation="3dp">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/trip_image"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/trip_paris"
             tools:srcCompat="@drawable/trip_paris" />
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/trip_image"
-            app:layout_constraintTop_toTopOf="parent">
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:id="@+id/trip_loc_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/roboto_slab_bold"
                 android:textColor="@color/colorTextPrimary"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 tools:text="Paris, France" />
 
             <TextView
                 android:id="@+id/trip_budget_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/roboto_slab_light"
                 android:text="TextView"
                 android:textColor="@color/colorTextPrimary"
@@ -64,7 +60,15 @@
                 android:text="TextView"
                 android:textColor="@color/colorTextPrimary"
                 tools:text="#romantic #instagram" />
+
+            <TextView
+                android:id="@+id/trip_username_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                tools:text="posted by Username" />
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </android.support.v7.widget.CardView>

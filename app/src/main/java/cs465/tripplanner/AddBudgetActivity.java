@@ -6,6 +6,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import cs465.tripplanner.data.Data;
+
 public class AddBudgetActivity extends AddActivity {
     private EditText budgetInput;
 
@@ -33,7 +35,7 @@ public class AddBudgetActivity extends AddActivity {
 
     @Override
     public void updateData() {
-        DataHolder.get().newTrip.setBudget(budgetInput.getText().toString());
+        Data.get().newTrip.setBudget(budgetInput.getText().toString());
     }
 
 }
