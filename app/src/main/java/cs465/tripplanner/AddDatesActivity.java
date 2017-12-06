@@ -12,16 +12,16 @@ import java.util.Locale;
 
 public class AddDatesActivity extends AddActivity {
     EditText addDatesFrom= (EditText) findViewById(R.id.add_dates_from);
-    Calendar myCalendar = Calendar.getInstance();
+    Calendar popupCalendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
         @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear,
-                              int dayOfMonth) {
+        public void onDateSet(DatePicker view, int yearPicked, int monthPicked,
+                              int dayPicked) {
             // TODO Auto-generated method stub
-            myCalendar.set(Calendar.YEAR, year);
-            myCalendar.set(Calendar.MONTH, monthOfYear);
-            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            popupCalendar.set(Calendar.YEAR, yearPicked);
+            popupCalendar.set(Calendar.MONTH, monthPicked);
+            popupCalendar.set(Calendar.DAY_OF_MONTH, dayPicked);
             updateLabel();
         }
 
@@ -42,9 +42,9 @@ public class AddDatesActivity extends AddActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                new DatePickerDialog(AddDatesActivity.this, date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                new DatePickerDialog(AddDatesActivity.this, date, popupCalendar
+                        .get(Calendar.YEAR), popupCalendar.get(Calendar.MONTH),
+                        popupCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
 
@@ -54,7 +54,7 @@ public class AddDatesActivity extends AddActivity {
         String myFormat = "MM/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-        addDatesFrom.setText(sdf.format(myCalendar.getTime()));
+        addDatesFrom.setText(sdf.format(popupCalendar.getTime()));
     }
     @Override
     public void updateData() {
