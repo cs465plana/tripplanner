@@ -30,12 +30,13 @@ public class PrefManager {
     }
 
     public void setFirstTimeLaunch(boolean isFirstTime) {
-        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
-        editor.commit();
+//        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
+//        editor.commit();
     }
 
     public boolean isFirstTimeLaunch() {
-        return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+//        return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+        return true;
     }
 
 }
